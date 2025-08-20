@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distopia</title>
+
+    <script src="java.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="computer">
+
+            <div id="singleImageContainer" class="row">
+                <div class="column">
+                    <img id="slide" src="images/loginpage.jpg" onclick="changeImg(), words()">
+                    <button id="loginButton" class="login" onclick="disappear(), showGridLayout(), words()">Login</button>
+                    </span>
+                    <audio id="Audio" src="audio/dinnerpartyaudio01.mp3">
+                    </audio>
+                </div>
+            </div>
+
+
+            <div id="gridImageContainer" class="row1">
+                    <div class="column1">
+                        <div class="slide1-container">
+                            <img id="dadOne" class="slide1" src="images/dadone.jpg" alt="dad with wine">
+                            <img id="dadTwo" class="slide1" src="images/dadtwo.jpg" alt="dad at window"  onclick="words()">
+                            <video autoplay loop muted id="videoElement" class="videoContainer" onclick="hideVideo()">  
+                                <source src="video/animatefinal.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <img id="slide2" src="images/funeral.jpg" >
+                    </div>
+            </div>
+                        <span id="aiText" >
+                        </span>
+                        <span id="inputTextBox" > 
+                        </span>
+
+        </div>
+
+    </div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+var modal = document.getElementById("myModal");
+
+
+var img = document.getElementById("dadOne");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+    }
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>
